@@ -530,3 +530,9 @@ span{
         font-size: 50%;
     }
 }
+
+.contact h3{
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
