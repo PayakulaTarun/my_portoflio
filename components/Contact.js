@@ -63,6 +63,27 @@ export default function Contact() {
                 <span>Vijayawada, Andhra Pradesh</span>
               </div>
             </div>
+            
+            <div className="availability-info">
+              <h4>Availability Information</h4>
+              <div className="availability-grid">
+                <div className="availability-item">
+                  <strong>Response Time:</strong> Within 24 hours
+                </div>
+                <div className="availability-item">
+                  <strong>Time Zone:</strong> IST (Indian Standard Time)
+                </div>
+                <div className="availability-item">
+                  <strong>Preferred Contact:</strong> Email for project inquiries, LinkedIn for networking
+                </div>
+                <div className="availability-item">
+                  <strong>Availability:</strong> Monday - Saturday, 9 AM - 8 PM IST
+                </div>
+                <div className="availability-item">
+                  <strong>Languages:</strong> English, Telugu, Hindi
+                </div>
+              </div>
+            </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>

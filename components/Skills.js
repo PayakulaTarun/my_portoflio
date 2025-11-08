@@ -35,6 +35,28 @@ export default function Skills() {
         { name: "Business Intelligence", level: 82 }
       ],
       icon: "📊"
+    },
+    {
+      title: "Tools & Platforms",
+      skills: [
+        { name: "Git/GitHub", level: 92 },
+        { name: "Docker", level: 80 },
+        { name: "Jupyter Notebooks", level: 95 },
+        { name: "VS Code", level: 90 },
+        { name: "Postman", level: 85 }
+      ],
+      icon: "🛠️"
+    },
+    {
+      title: "Soft Skills",
+      skills: [
+        { name: "Problem-solving", level: 95 },
+        { name: "Client Communication", level: 90 },
+        { name: "Project Management", level: 85 },
+        { name: "Technical Documentation", level: 88 },
+        { name: "Agile/Scrum", level: 80 }
+      ],
+      icon: "🎯"
     }
   ]
 

@@ -32,6 +32,11 @@ export default function Footer() {
         </div>
         
         <div className="footer-bottom">
+          <div className="footer-links">
+            <a href="#home" className="back-to-top">Back to Top ↑</a>
+            <span className="footer-separator">|</span>
+            <span>Last Updated: November 2025</span>
+          </div>
           <p>&copy; 2024 Payakula Tarun Chandra. All rights reserved.</p>
         </div>
       </div>

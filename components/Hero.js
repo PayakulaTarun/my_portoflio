@@ -30,8 +30,12 @@ export default function Hero() {
                 <span className="label">Task Automation</span>
               </div>
               <div className="stat">
-                <span className="number">2+</span>
-                <span className="label">Years Experience</span>
+                <span className="number">500+</span>
+                <span className="label">LinkedIn Connections</span>
+              </div>
+              <div className="stat">
+                <span className="number">758</span>
+                <span className="label">Followers</span>
               </div>
             </div>
 

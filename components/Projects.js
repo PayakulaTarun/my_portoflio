@@ -6,7 +6,12 @@ export default function Projects() {
       impact: "30% reduction in traffic delays",
       tech: ["Python", "TensorFlow", "OpenCV", "React", "Node.js"],
       category: "AI/ML",
-      featured: true
+      featured: true,
+      completionDate: "October 2024 - Present",
+      demoLink: "#",
+      githubLink: "#",
+      status: "Active Development",
+      availability: "Live Demo Available"
     },
     {
       title: "Gmail Automation AI Agent",
@@ -14,7 +19,12 @@ export default function Projects() {
       impact: "80% reduction in manual tasks",
       tech: ["Python", "NLP", "Gmail API", "Machine Learning"],
       category: "Automation",
-      featured: true
+      featured: true,
+      completionDate: "November 2024",
+      demoLink: "#",
+      githubLink: "#",
+      status: "Production Ready",
+      availability: "Available for Integration"
     },
     {
       title: "Computer Vision Applications",
@@ -22,7 +32,12 @@ export default function Projects() {
       impact: "95% detection accuracy",
       tech: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
       category: "AI/ML",
-      featured: false
+      featured: false,
+      completionDate: "October 2024",
+      demoLink: "#",
+      githubLink: "#",
+      status: "Completed",
+      availability: "Open Source"
     },
     {
       title: "Smart Retail Inventory System",
@@ -30,7 +45,12 @@ export default function Projects() {
       impact: "25% reduction in overstock",
       tech: ["Python", "Machine Learning", "SQL", "Dashboard"],
       category: "Business Intelligence",
-      featured: false
+      featured: false,
+      completionDate: "September 2024",
+      demoLink: "#",
+      githubLink: "#",
+      status: "Completed",
+      availability: "Client Deployed"
     }
   ]
 
@@ -54,6 +74,17 @@ export default function Projects() {
                 {project.tech.map((tech, techIndex) => (
                   <span key={techIndex} className="tech-tag">{tech}</span>
                 ))}
+              </div>
+              <div className="project-status">
+                <span className="status-badge">[Status: {project.status}]</span>
+                <span className="availability-badge">[{project.availability}]</span>
+              </div>
+              <div className="project-date">
+                <strong>Completed:</strong> {project.completionDate}
+              </div>
+              <div className="project-links">
+                <a href={project.demoLink} className="btn secondary">View Demo</a>
+                <a href={project.githubLink} className="btn secondary">View on GitHub</a>
               </div>
             </div>
           ))}
