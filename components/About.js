@@ -9,7 +9,10 @@ export default function About() {
           </p>
           
           <div className="what-i-deliver">
-            <h3>🎯 What I Deliver</h3>
+            <div className="section-header">
+              <span className="section-icon">🎯</span>
+              <h3>What I Deliver</h3>
+            </div>
             
             <div className="delivery-section">
               <h4>Full-Stack Web Applications</h4>
@@ -53,7 +56,10 @@ export default function About() {
           </div>
           
           <div className="achievements-section">
-            <h3>💼 Recent Achievements</h3>
+            <div className="section-header">
+              <span className="section-icon">🏆</span>
+              <h3>Recent Achievements</h3>
+            </div>
             <ul>
               <li>Analyzed 100+ datasets across various industries</li>
               <li>Developed production-ready AI applications with real-world impact</li>
@@ -63,12 +69,18 @@ export default function About() {
           </div>
           
           <div className="impact-section">
-            <h3>🏆 Professional Impact</h3>
+            <div className="section-header">
+              <span className="section-icon">💼</span>
+              <h3>Professional Impact</h3>
+            </div>
             <p>My work focuses on delivering measurable results: reducing operational costs, improving decision-making processes, and automating repetitive tasks to help businesses scale efficiently.</p>
           </div>
 
           <div className="open-to-work">
-            <h3>🟢 Currently Open to Work</h3>
+            <div className="section-header">
+              <span className="section-icon">🟢</span>
+              <h3>Currently Open to Work</h3>
+            </div>
             <div className="work-status">
               <h4>Actively seeking opportunities as:</h4>
               <ul>
@@ -83,7 +95,10 @@ export default function About() {
           </div>
           
           <div className="certifications">
-            <h3>Certifications & Credentials</h3>
+            <div className="section-header">
+              <span className="section-icon">🎓</span>
+              <h3>Certifications & Credentials</h3>
+            </div>
             <div className="cert-detailed">
               <div className="cert-item">
                 <h4>HackerRank Software Development Intern</h4>

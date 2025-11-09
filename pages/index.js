@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
@@ -14,6 +15,39 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
 export default function Home() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+
+    // Intersection Observer for smooth animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    )
+
+    // Observe elements after loading
+    if (!loading) {
+      setTimeout(() => {
+        const animateElements = document.querySelectorAll('.section-animate')
+        animateElements.forEach((el) => observer.observe(el))
+      }, 100)
+    }
+
+    return () => {
+      clearTimeout(timer)
+      observer.disconnect()
+    }
+  }, [loading])
+
   return (
     <>
       <Head>
@@ -22,18 +56,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      {loading && (
+        <div className="preloader">
+          <div className="loader"></div>
+        </div>
+      )}
+      
       <Header />
-      <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Services />
-      <Process />
-      <Projects />
-      <Insights />
-      <Testimonials />
-      <FAQ />
-      <Contact />
+      <div id="home"><Hero /></div>
+      <div className="section-animate" id="about"><About /></div>
+      <div className="section-animate"><Education /></div>
+      <div className="section-animate" id="skills"><Skills /></div>
+      <div className="section-animate"><Services /></div>
+      <div className="section-animate"><Process /></div>
+      <div className="section-animate" id="projects"><Projects /></div>
+      <div className="section-animate"><Insights /></div>
+      <div className="section-animate" id="testimonials"><Testimonials /></div>
+      <div className="section-animate"><FAQ /></div>
+      <div className="section-animate" id="contact"><Contact /></div>
       <Footer />
     </>
   )
