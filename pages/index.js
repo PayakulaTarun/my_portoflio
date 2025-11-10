@@ -35,12 +35,27 @@ export default function Home() {
     )
 
     // Observe elements after loading
-    if (!loading) {
-      setTimeout(() => {
-        const animateElements = document.querySelectorAll('.section-animate')
-        animateElements.forEach((el) => observer.observe(el))
-      }, 100)
+    const observeElements = () => {
+      const animateElements = document.querySelectorAll('.section-animate')
+      animateElements.forEach((el) => observer.observe(el))
     }
+
+    if (!loading) {
+      setTimeout(observeElements, 100)
+    }
+
+    // Also observe immediately when component mounts
+    setTimeout(observeElements, 200)
+
+    // Fallback: Make all sections visible after 3 seconds if intersection observer fails
+    setTimeout(() => {
+      const animateElements = document.querySelectorAll('.section-animate')
+      animateElements.forEach((el) => {
+        if (!el.classList.contains('visible')) {
+          el.classList.add('visible')
+        }
+      })
+    }, 3000)
 
     return () => {
       clearTimeout(timer)
@@ -65,7 +80,7 @@ export default function Home() {
       
       <Header />
       <div id="home"><Hero /></div>
-      <div className="section-animate" id="about"><About /></div>
+      <div className="section-animate visible" id="about"><About /></div>
       <div className="section-animate"><Education /></div>
       <div className="section-animate" id="skills"><Skills /></div>
       <div className="section-animate"><Services /></div>
